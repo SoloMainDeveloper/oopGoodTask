@@ -5,9 +5,10 @@ package ru.oop.task1;
  */
 public class Car {
     /**
-     * Перемещает person максимально близко к destination
+     * Везёт person максимально близко к destination, тем самым
+     * изменяя местоположение person и своё собственное.
      */
-    public void driveTo(Person person, Position destination) {
+    public void moveTo(Person person, Position destination) {
         //TODO
     }
 }
