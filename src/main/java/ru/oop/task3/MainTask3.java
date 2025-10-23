@@ -1,6 +1,5 @@
 package ru.oop.task3;
 
-import java.time.format.DecimalStyle;
 import java.util.List;
 
 /**
@@ -29,7 +28,7 @@ public class MainTask3 {
      * @see Position
      */
     public void moveTo(Person person, Position destination){
-        List<Transport> transportList = person.getTransportListForDestination(destination);
+        List<Transport> transportList = List.of(new Bus("70"), new Car(), new Bus("086"));
         for(Transport transport : transportList){
             person.walk(transport.getPosition());
             transport.moveTo(person, destination);
