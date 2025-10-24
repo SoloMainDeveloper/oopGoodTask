@@ -27,12 +27,12 @@ public class MainTask3 {
      * @see Person
      * @see Position
      */
-    public void moveTo(Person person, Position destination){
-        List<Transport> transportList = List.of(new Bus("70"), new Car(), new Bus("086"));
-        for(Transport transport : transportList){
+    public void moveTo(Person person, Position destination, List<Transport> transports){
+        for(Transport transport : transports){
             person.walk(transport.getPosition());
             transport.moveTo(person, destination);
         }
         person.walk(destination);
+        assert person.getPosition() == destination;
     }
 }
